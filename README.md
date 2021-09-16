@@ -1,4 +1,4 @@
-# FrontEnd
+# FrontEnd y BackEND
 
 Grupo Conformado por:
 Kevin Leonardo Alvarez Mora
@@ -12,4 +12,7 @@ Jhonatan Alexander Castillo Perez
 Tays Gutierrez
 
 
-FrontEnd Desarrollado en React JS para Misión Tic 2021
+FrontEnd Desarrollado en React JS Y BackEnd Desarrollado en NodeJS 
+
+para Misión Tic 2021
+
