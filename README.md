@@ -1,4 +1,4 @@
-# FrontEnd y BackEND
+# FrontEnd
 
 Grupo Conformado por:
 
@@ -13,7 +13,7 @@ Jhonatan Alexander Castillo Perez
 Tays Gutierrez
 
 
-FrontEnd Desarrollado en React JS Y BackEnd Desarrollado en NodeJS 
+FrontEnd Desarrollado en React JS 
 
 para Misión Tic 2021
 
