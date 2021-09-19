@@ -2,15 +2,17 @@
 
 Grupo Conformado por:
 
-Kevin Leonardo Alvarez Mora
+Grupo Conformado por:
 
-Jerson Daniel Basto Gil C.C 1033792369
+Kevin Leonardo Alvarez Mora 1010228053 klalvarezm@gmail.com
 
-Cristian Martinez
+Jerson Daniel Basto Gil C.C 1033792369 jdbastog@correo.udistrital.edu.co
 
-Jhonatan Alexander Castillo Perez
+Cristian Martinez cristianmartinez9519@outlook.com
 
-Tays Gutierrez
+Jhonatan Alexander Castillo Perez jacastillop@unal.edu.co
+
+Tays Gutierrez 1031169475 taysgutierrezc@gmail.com
 
 
 FrontEnd Desarrollado en React JS 
