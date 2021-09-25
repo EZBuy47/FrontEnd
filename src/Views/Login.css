@@ -1,0 +1,38 @@
+.Login {
+    display: flex;  
+    flex-direction: column;
+    justify-content: center;
+    
+    font-family: Arial, Helvetica, sans-serif;
+    }
+    
+    .Login body{
+      background-color: beige;
+    }
+    
+    .Login p{
+      font-size: 150%;
+    }
+    
+    .Entradas{
+     display: flex;
+     flex-direction: column;
+     justify-content: center;
+     padding-left: 8%;
+     }
+    
+     .Entradas input{
+       width: 30%;
+       font-size: 85%;
+      }
+    
+     .Entradas button{
+      width: 15%;
+      font-size: 100%;
+      margin-top: 2%;
+     }
+    
+     .Entradas button:hover{
+       cursor: pointer;
+     }
+    
