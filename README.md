@@ -1,5 +1,5 @@
-##FrontEND
-#Grupo Conformado por:
+# FrontEND
+## Grupo Conformado por:
 
 Kevin Leonardo Alvarez Mora 1010228053 klalvarezm@gmail.com
 
@@ -11,7 +11,7 @@ Jhonatan Alexander Castillo Perez C.C. 1031156294 jacastillop@unal.edu.co
 
 Tays Gutierrez 1031169475 taysgutierrezc@gmail.com
 
-#FrontEnd Desarrollado en ReactJS
+## FrontEnd Desarrollado en ReactJS
 
 para Misión Tic 2021
 
