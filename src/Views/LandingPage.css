@@ -1,20 +1,39 @@
-.body {
-    height: 100vh;
-    overflow: auto;   /* Arregla problema de imagen salida */
-    background-color: rgba(0, 0, 0, 0.8);
-    background-size: cover;
-    font-family: "Montserrat", sans-serif;
+  img{
+    position:absolute;
+    z-index:-1;
   }
 
-  h1 {
+  
+.LandgingPage body {
+    height: 100vh;
+    overflow: auto;   /* Arregla problema de imagen salida */
+    background-image: url('Resources/BackGroundLandingPage.jpg');
+    background-size:     cover;                      /* <------ */
+    background-repeat:   no-repeat;
+    background-position: center center; 
+    font-family: "Montserrat", sans-serif;
+  }*/
+
+  .LandingPage h1 {
     margin-top: 3%;
     font-style: normal;
     font-weight: normal;
     font-size: 48px;
     line-height: 59px;
-    color: #ffffff;
+    color: whitesmoke;
     text-shadow: 3px 4px 5px rgba(0, 0, 0, 0.9);
   }
+
+h1{
+  margin-top: 3%;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 48px;
+  line-height: 59px;
+  color: whitesmoke;
+  text-shadow: 3px 4px 5px rgba(0, 0, 0, 0.9);
+}
+
   h3 {
     margin-top: 2px;
     font-size: 24px;
@@ -24,6 +43,8 @@
 
     /* text-shadow: 3px 4px 5px rgba(0, 0, 0, 0.7); */
   }
+
+  
   .cajas {
     margin-top: 4%;
     width: 80%;

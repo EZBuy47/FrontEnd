@@ -5,7 +5,8 @@ import {Route} from 'react-router-dom';
 import HeaderNoLogin from './Views/HeaderNoLogin';
 import Login from './Views/Login';
 import AllUsers from './Views/AllUsers';
-
+import UpdateUsers from './Views/UpdateUsers';
+import 'bootstrap/dist/css/bootstrap.min.css';
 function App() {
 
   return( 
@@ -17,7 +18,7 @@ function App() {
   <Route exact path  ="/Register" component={Register}/>
   <Route exact path  ="/Login" component={Login}/>
   <Route exact path  ="/AllUsers" component={AllUsers}/>
-
+  <Route exact path  ="/UpdateUsers/:email" component={UpdateUsers}/>
   </div>);
   }
 

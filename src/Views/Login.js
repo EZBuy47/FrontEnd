@@ -21,7 +21,7 @@ function Login(){
          <p>Bienvenido de nuevo</p>
          <div className="Entradas">
          
-         <label>Nombre:</label>
+         <label>Correo:</label>
          <input type="text" 
          onChange={(event) =>{setEmail(event.target.value);}}
          ></input>

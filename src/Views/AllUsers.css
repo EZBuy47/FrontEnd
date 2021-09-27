@@ -1,19 +1,19 @@
+.AllUsers body{
+  background-color:gray;
+}
+
+.AllUsers p{
+  font-weight: 900;
+}
+
+
 .izquierda {
     text-align: left;
   }
 
   
 
-  .body {
-    height: 100vh;
-    overflow: auto;   /* Arregla problema de imagen salida */
-    background-size: cover;
-    font-family: "Montserrat", sans-serif;
-    color: black;
-  background-color: #10100d;
-  opacity: 1;
-  background-image:  repeating-radial-gradient( circle at 0 0, transparent 0, #10100d 11px ), repeating-linear-gradient( #322d0855, #322d08 );
-  }
+
 
   
 

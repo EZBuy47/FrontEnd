@@ -1,12 +1,29 @@
 import React from "react";
-import {useState} from 'react';
+import {useState,useEffect} from 'react';
 import Axios from 'axios';
 import { useHistory } from "react-router-dom";
 import './AllUsers.css'
 function AllUsers(){
     const history = useHistory();
     const [listaUsuarios,setListaUsuarios] = useState([]);
-    const obtenerUsuarios  =() =>{
+    const useMountEffect = (fun) => useEffect(fun, []);
+    
+
+
+    useEffect(() => {
+      
+      Axios.get('http://localhost:3001/allusers',{
+            
+      }).then((response)=>{
+        console.log("Saludos");
+        console.log(response.data);
+        setListaUsuarios(response.data);
+      });
+    },[]);
+  
+
+
+   /* const obtenerUsuarios  =() =>{
         Axios.get('http://localhost:3001/allusers',{
             
           }).then((response)=>{
@@ -14,20 +31,30 @@ function AllUsers(){
             console.log(response.data);
             setListaUsuarios(response.data);
           });
+    }*/
+
+    const toUpdate= (email) =>{
+     history.push('./UpdateUsers/'+email);
+     console.log("Hola");
     }
-  
     
     return (
       
         <div className="AllUsers">
           <body>
-         <p onClick={obtenerUsuarios}>Bienvenido de nuevo</p>
+         
          <div  className="Lista Users" >
+        
+          
          {listaUsuarios.map((val,key)=>{
+            
             return (
-                <div>
-                <table class="table table-hover">
-                <thead>
+                <div 
+                onClick={() => toUpdate(val.email)}
+                
+               >
+                 <table  class="table table-hover">
+         <thead>
                 <tr>
                 
               <th scope="col">NOMBRE</th>
@@ -41,8 +68,10 @@ function AllUsers(){
               <th scope="col">ULTIMO INGRESO</th>
             </tr>
           </thead>
+               
           <tbody>
-            <tr>
+           
+            <tr >
               <td scope="row">{ val.name }</td>
               <td>{ val.identification }</td>
               <td>{ val.email }</td>
@@ -59,7 +88,9 @@ function AllUsers(){
                 
                 
                 )
+
          })}
+         
          </div>
         </body>
         </div>

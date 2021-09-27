@@ -32,7 +32,9 @@ function Register(){
       }).then(()=>{
         console.log("Creacion Exitosa");
         history.push('../')
-      });
+      }).catch(error =>console.log("El correo ya existe"))
+        
+        
     };
     
     return (

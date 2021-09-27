@@ -12,6 +12,7 @@ function HeaderNoLogin(){
            <Link to="/">Al Inicio</Link>
            <Link to="/Login">Entra</Link>
            <Link to="/Register">Registrate</Link>
+           <Link to="/AllUsers">Lista Usuarios</Link>
            </div>
         </div>
     );
