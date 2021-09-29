@@ -18,9 +18,6 @@ function LandingPage(){
             <h3>¡Para probar toda la experiencia sigue a registro!</h3>
           </div>
         </div>
-    
-       
-    
         
         <div class="container">
           <div class="cajas">
