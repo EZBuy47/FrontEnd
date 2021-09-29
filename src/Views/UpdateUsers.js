@@ -41,6 +41,12 @@ function UpdateUsers(){
     const Actualizar=()=>{
       Axios.put('http://localhost:3001/updateuser',{
           email:email,
+          name:name,
+          identification:identification,
+          password:password,
+          addedDate:addedDate,
+          role:role,
+          lastLoginDate:lastLoginDate,
           cellphone:cellphone,
           speciality:speciality
       }).then(()=>{
@@ -101,7 +107,7 @@ function UpdateUsers(){
 
       <label>Ultimo Login:</label>
        <input  type="text" disabled value={lastLoginDate}
-       onChange={(event) =>{setAddedDate(event.target.value);}}
+       onChange={(event) =>{setLastLoginDate(event.target.value);}}
        ></input>
 
     

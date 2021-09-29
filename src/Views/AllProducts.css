@@ -12,3 +12,9 @@
 .AllProducts tbody{
     border-radius: 00.5cm;
 }
+
+.TextArea{
+    display: block;
+    width: 85.4%;
+    
+}

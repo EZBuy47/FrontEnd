@@ -74,7 +74,7 @@ function AddProducts(){
        ></input>
        
        <label>Describe tu producto:</label>
-       <textarea
+       <textarea className="TextArea"
        onChange={(event) =>{setDescription(event.target.value);}}
        ></textarea>
        
