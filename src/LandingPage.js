@@ -4,26 +4,20 @@ import background from './Views/Resources/BackGroundLandingPage.jpg'
 function LandingPage(){
     return(
         <div class="body" >
-<<<<<<< Updated upstream
          <div style={{  backgroundImage: `url(${background})`}}></div>
           <img  src={background} className="background" />
         
-=======
-        <center>
->>>>>>> Stashed changes
         <div class="container">
           <div class="row justify-content-center">
             <h1>¡La mejor experiencia al mejor precio!</h1>
           </div>
         </div>
-        </center>
-        <center>
+    
         <div class="container">
           <div class="row justify-content-center">
             <h3>¡Para probar toda la experiencia sigue a registro!</h3>
           </div>
         </div>
-        </center>
     
        
     
