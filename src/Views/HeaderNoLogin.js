@@ -13,6 +13,8 @@ function HeaderNoLogin(){
            <Link to="/Login">Entra</Link>
            <Link to="/Register">Registrate</Link>
            <Link to="/AllUsers">Lista Usuarios</Link>
+           <Link to="/AddProducts">Añade Tu Producto</Link>
+           <Link to="/AllProducts">Lista Productos</Link>
            </div>
         </div>
     );

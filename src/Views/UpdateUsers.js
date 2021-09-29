@@ -1,5 +1,5 @@
 import React from "react";
-import {useState} from 'react';
+import {useState,useEffect} from 'react';
 import Axios from 'axios';
 import './Register.css'
 import { useHistory,useParams } from "react-router-dom";
@@ -8,8 +8,32 @@ function UpdateUsers(){
     const history = useHistory();
     const {email} = useParams();
     console.log(email);
+    const [name,setName]=useState("");
+    const [identification,setIdentification]=useState(0);
     const [cellphone,setCellphone]=useState(0);
+    const [password,setPassword]=useState("");
+    const [addedDate,setAddedDate]=useState("");
+    const [lastLoginDate,setLastLoginDate]=useState("");
     const [speciality,setSpeciality]=useState("");
+    const [role,setRole]=useState("Usuario");
+    
+    useEffect(() => {
+      
+      Axios.get(`http://localhost:3001/usersbyemail/${email}`,{
+            
+      }).then((response)=>{
+       console.log("Saludos");
+       console.log(response.data);
+       setName(response.data.name);
+       setIdentification(response.data.identification);
+       setCellphone(response.data.cellphone);
+       setPassword(response.data.password);
+       setAddedDate(response.data.addedDate);
+       setSpeciality(response.data.speciality);
+       setRole(response.data.role);
+       setLastLoginDate(response.data.lastLoginDate);
+      });
+    },[]);
     
 
     
@@ -47,18 +71,53 @@ function UpdateUsers(){
 
          <label>Correo:</label>
          <input type="text" value={email} 
-         onChange={(event) =>{setCellphone(event.target.value);}}
          ></input> 
         
-         <label>Numero De Celular:</label>
-         <input type="number"
-         onChange={(event) =>{setCellphone(event.target.value);}}
-         ></input>
-  
-         <label>Especialidad:</label>
-         <input type="text"
-         onChange={(event) =>{setSpeciality(event.target.value);}}
-         ></input>
+        <label>Nombre:</label>
+       <input type="text" value={name}
+       onChange={(event) =>{setName(event.target.value);}}
+       ></input>
+       
+       <label>Cedula:</label>
+       <input type="number" value={identification}
+       onChange={(event) =>{setIdentification(event.target.value);}}
+       ></input>
+       
+       <label>Contraseña:</label>
+       <input type="text" disabled value={password}
+       onChange={(event) =>{setPassword(event.target.value);}}
+       ></input>
+       
+       
+       <label>Numero De Celular:</label>
+       <input type="number" value={cellphone}
+       onChange={(event) =>{setCellphone(event.target.value);}}
+       ></input>
+
+       <label>Fecha de registro:</label>
+       <input  type="text" disabled value={addedDate}
+       onChange={(event) =>{setAddedDate(event.target.value);}}
+       ></input>
+
+      <label>Ultimo Login:</label>
+       <input  type="text" disabled value={lastLoginDate}
+       onChange={(event) =>{setAddedDate(event.target.value);}}
+       ></input>
+
+    
+          <label>Rol Asignado:</label>
+       <input type="text" value = {role}
+       onChange={(event) =>{setRole(event.target.value);}}
+       ></input>
+         
+      
+         
+
+       <label>Especialidad:</label>
+       <input type="text"
+       onChange={(event) =>{setSpeciality(event.target.value);}}
+       ></input>
+
   
          <button className="updater" onClick={() => Actualizar()}>Actualizar
          </button>

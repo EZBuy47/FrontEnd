@@ -49,13 +49,10 @@ function AllUsers(){
          {listaUsuarios.map((val,key)=>{
             
             return (
-                <div 
-                onClick={() => toUpdate(val.email)}
-                
-               >
+                <div onClick={() => toUpdate(val.email)}>
                  <table  class="table table-hover">
-         <thead>
-                <tr>
+                 <thead>
+                 <tr>
                 
               <th scope="col">NOMBRE</th>
               <th scope="col">IDENTIFICACION</th>
