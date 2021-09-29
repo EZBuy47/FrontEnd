@@ -38,6 +38,7 @@ function Register(){
     };
     
     return (
+      <div class="container">
       
       <div className="Register">
         <body>
@@ -91,13 +92,12 @@ function Register(){
        <input type="text"
        onChange={(event) =>{setSpeciality(event.target.value);}}
        ></input>
-
        <button onClick={mostrarDatos}>Registrate
        </button>
       </div>
       </body>
       </div>
-      
+      </div>
     );
     
   }

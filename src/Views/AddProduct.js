@@ -46,6 +46,7 @@ function AddProducts(){
     };
     
     return (
+      <div class="container">
       
       <div className="Register">
         <body>
@@ -93,6 +94,7 @@ function AddProducts(){
        </button>
       </div>
       </body>
+      </div>
       </div>
       
     );
