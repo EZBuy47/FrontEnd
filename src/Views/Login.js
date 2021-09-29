@@ -3,6 +3,7 @@ import {useState} from 'react';
 import Axios from 'axios';
 import { useHistory } from "react-router-dom";
 import './Login.css'
+import axios from "axios";
 function Login(){
     const history = useHistory();
     const [email,setEmail]=useState("");
@@ -12,6 +13,11 @@ function Login(){
     const Entrada = () =>{
         console.log("Login Exitoso");
         history.push('../')
+    
+    };
+    const devolverUsuario = () =>{
+        Axios.get('http://localhost:3001/usuario', {}).then((response)=>
+        {console.log(response.data);})
     };
     
     return (
@@ -34,8 +40,7 @@ function Login(){
          ></input>
          
          
-         
-         <button onClick={Entrada}>Entra
+         <button onClick={Entrada,devolverUsuario}>Entra
          </button>
         </div>
         </body>
