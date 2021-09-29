@@ -2,7 +2,7 @@ import React from "react";
 import {useState,useEffect} from 'react';
 import Axios from 'axios';
 import { useHistory } from "react-router-dom";
-import './AllUsers.css'
+import './AllProducts.css'
 function AllProducts(){
     const history = useHistory();
     const [listaProductos,setListaProductos] = useState([]);
@@ -29,20 +29,15 @@ function AllProducts(){
     }
     
     return (
-      
-        <div className="AllUsers">
+      <div class="container">
+        <div className="AllProducts">
           <body>
          
-         <div  className="Lista Users" >
-        
-          
-         {listaProductos.map((val,key)=>{
-            
-            return (
-                <div onClick={() => toUpdate(val._id)}>
-                 <table  class="table table-hover">
-                 <thead>
-                 <tr>
+         <div  className="Lista Products" >
+         <div>
+            <table  class="table table-hover">
+              <thead>
+              <tr>
               <th scope="col">ID</th>  
               <th scope="col">NOMBRE</th>
               <th scope="col">REFERENCIA</th>
@@ -51,13 +46,12 @@ function AllProducts(){
               <th scope="col">DESCRIPCION</th>
               <th scope="col">VENDIDO POR</th>
               <th scope="col">COMPRADO POR</th>
-              
             </tr>
           </thead>
-               
           <tbody>
-           
-            <tr >
+          {listaProductos.map((val,key)=>{
+              return(
+              <tr  onClick={() => toUpdate(val._id)}>
               <td scope="row">{ val._id }</td>
               <td>{ val.name }</td>
               <td>{ val.reference }</td>
@@ -66,21 +60,17 @@ function AllProducts(){
               <td>{ val.description }</td>
               <td>{ val.boughtby }</td>
               <td>{ val.soldby }</td>
-              
-            </tr>
+              </tr>
+               )
+               })}
+            
           </tbody>
         </table>
                 </div>
-                
-                
-                )
-
-         })}
-         
          </div>
         </body>
         </div>
-        
+        </div>
       );
 }
 

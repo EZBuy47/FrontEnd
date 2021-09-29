@@ -1,14 +1,13 @@
+
 .HeaderNoLogin{
-    background-color: seagreen;
-  overflow: hidden;
-  margin: 0;
-  font-family: Arial, sans-serif;
-  font-weight: 600;
+    overflow: hidden;
+    margin: 0;
+    font-family: Arial, sans-serif;
+    font-weight: 600;
   }
 
   .UserNameSpace p{
     float: left;
-    background-color:seagreen;
     color:black;
     overflow: hidden;
     margin: 0;
@@ -20,10 +19,12 @@
   }
   .LinkBox{
       float: right;
-      background-color:seagreen;
   }
   .HeaderNoLogin a:hover {
-    background-color: #ddd;
+    background: #667db6;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #00bbff, #0082c8, #0082c8, #00bbff);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #00bbff, #0082c8, #0082c8, #00bbff); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
     color: black;
   }
 
@@ -40,6 +41,12 @@
     text-decoration: none;
     font-size: 17px;
     font: bolder;
+  }
+  body{
+    background: #373B44;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #4286f4, #373B44);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #00bbff, #5788fa); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  
   }
 
   

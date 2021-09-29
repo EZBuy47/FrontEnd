@@ -4,6 +4,7 @@ import './HeaderNoLogin.css'
 
 function HeaderNoLogin(){
     return(
+        <body>
        <div className="HeaderNoLogin">
            <div className="UserNameSpace">
                <p>Bienvenido "Username"</p>
@@ -17,6 +18,7 @@ function HeaderNoLogin(){
            <Link to="/AllProducts">Lista Productos</Link>
            </div>
         </div>
+        </body>
     );
 }
 

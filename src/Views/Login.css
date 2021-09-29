@@ -44,10 +44,11 @@
       }
     
      .Entradas button{
+       text-align: center;
       width: 15%;
       font-size: 100%;
       margin-top: 2%;
-      background-color: #39ace7;
+      background-color: teal;
       border: none;
       color: white;
       padding: 15px 80px;
@@ -70,7 +71,8 @@
     
      .Entradas button:hover{
        cursor: pointer;
-       background-color:teal;
+       color: black;
+       background-color:transparent;
        
      }
     

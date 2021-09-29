@@ -6,19 +6,22 @@ function LandingPage(){
         <div class="body" >
          <div style={{  backgroundImage: `url(${background})`}}></div>
           <img  src={background} className="background" />
-        
+        <div className="container1">
         <div class="container">
           <div class="row justify-content-center">
             <h1>¡La mejor experiencia al mejor precio!</h1>
           </div>
         </div>
-    
+        </div>
+        <div className="container2">
         <div class="container">
           <div class="row justify-content-center">
             <h3>¡Para probar toda la experiencia sigue a registro!</h3>
           </div>
+          </div>
         </div>
         
+        <div className="container3">
         <div class="container">
           <div class="cajas">
             <div class="row justify-content-center">
@@ -27,7 +30,7 @@ function LandingPage(){
                 <center>
                   Haga parte de nuestro emprendimiento llenado un pequeño formulario
                 </center>
-                <a class="btn btn-outline-success" href="/Register" role="button"
+                <a className="btn" href="/Register" role="button"
                 >Registro</a>
               </div>
               <div class="col-lg">
@@ -36,7 +39,7 @@ function LandingPage(){
                   Ingrese sus datos de acceso para vivir toda una experiencia ecológica
                 </center>
                 <a
-                  class="btn btn-outline-success"
+                  className="btn"
                   href="/Login"
                   role="button"
                 >Iniciar</a>
@@ -44,7 +47,7 @@ function LandingPage(){
             </div>
           </div>
         </div>
-        
+        </div>
       </div>
     );
 }

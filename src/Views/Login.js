@@ -18,7 +18,9 @@ function Login(){
       
         <div className="Login">
           <body>
+          <center>
          <p>Bienvenido de nuevo</p>
+         </center>
          <div className="Entradas">
          
          <label>Correo:</label>

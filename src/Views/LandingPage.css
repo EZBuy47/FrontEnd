@@ -77,24 +77,38 @@ h1{
     margin-left: 30px;
     margin-right: 30px;
   }
-  .btn-outline-success {
-    text-align: center;
-    flex-direction: row;
-    padding: 3px 0px;
-
-    position: absolute;
-    left: 35%;
-    right: 35%;
-    top: 73%;
-    bottom: 10%;
-
-    background: #005609;
-    color: #ffffff;
-    box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.25);
-    border-radius: 10px;
-  }
 
   .LandingPage a{
     background-color:cornsilk;
     backdrop-filter: none;
+  }
+  .container1{
+    text-align: center;
+  }
+  .container2{
+    text-align: center;
+  }
+  .container3{
+    text-align: center;
+  }
+
+  .container3 a{
+    background: #093028;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #237A57, #093028);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #237A57, #093028); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    border-style: groove;
+    border-radius: 0.3cm;
+    color: white;
+  }
+  a.btn:hover{
+    background: #DCE35B;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #45B649, #DCE35B);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #45B649, #DCE35B); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+    color: black;
+  }
+  .background{
+    flex: 1;
+    width: null;
+    height: null;
   }

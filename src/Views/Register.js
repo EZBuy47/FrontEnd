@@ -41,8 +41,12 @@ function Register(){
       
       <div className="Register">
         <body>
+          <center>
+            
        <p>Registrate Para disfrutar los beneficios</p>
+       </center>
        <div className="Entradas">
+         
        
        <label>Nombre:</label>
        <input type="text" 

@@ -39,36 +39,30 @@ function AllUsers(){
     }
     
     return (
-      
+      <div class="container">
         <div className="AllUsers">
           <body>
-         
          <div  className="Lista Users" >
-        
-          
+          <div>
+          <table  class="table table-hover">
+                      <thead>
+                      <tr>
+                      <th scope="col">NOMBRE</th>
+                      <th scope="col">IDENTIFICACION</th>
+                      <th scope="col">CORREO</th>
+                      <th scope="col">CELULAR</th>
+                      <th scope="col">CONTRASEÑA</th>
+                      <th scope="col">ESPECIALIDAD</th>
+                      <th scope="col">ROL</th>
+                      <th scope="col">FECHA INGRESO</th>
+                      <th scope="col">ULTIMO INGRESO</th>
+                    </tr>
+                  </thead>
+                  <tbody>
          {listaUsuarios.map((val,key)=>{
             
             return (
-                <div onClick={() => toUpdate(val.email)}>
-                 <table  class="table table-hover">
-                 <thead>
-                 <tr>
-                
-              <th scope="col">NOMBRE</th>
-              <th scope="col">IDENTIFICACION</th>
-              <th scope="col">CORREO</th>
-              <th scope="col">CELULAR</th>
-              <th scope="col">CONTRASEÑA</th>
-              <th scope="col">ESPECIALIDAD</th>
-              <th scope="col">ROL</th>
-              <th scope="col">FECHA INGRESO</th>
-              <th scope="col">ULTIMO INGRESO</th>
-            </tr>
-          </thead>
-               
-          <tbody>
-           
-            <tr >
+            <tr onClick={() => toUpdate(val.email)}>
               <td scope="row">{ val.name }</td>
               <td>{ val.identification }</td>
               <td>{ val.email }</td>
@@ -79,19 +73,15 @@ function AllUsers(){
               <td>{ val.addedDate }</td>
               <td>{ val.lastLoginDate }</td>
             </tr>
-          </tbody>
-        </table>
-                </div>
-                
-                
                 )
-
          })}
-         
+         </tbody>
+         </table>
+         </div>
          </div>
         </body>
         </div>
-        
+        </div>
       );
 }
 
