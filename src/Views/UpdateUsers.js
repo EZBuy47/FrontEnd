@@ -15,7 +15,7 @@ function UpdateUsers(){
     const [addedDate,setAddedDate]=useState("");
     const [lastLoginDate,setLastLoginDate]=useState("");
     const [speciality,setSpeciality]=useState("");
-    const [role,setRole]=useState("Usuario");
+    const [role,setRole]=useState("");
     
     useEffect(() => {
       
@@ -117,10 +117,8 @@ function UpdateUsers(){
        ></input>
          
       
-         
-
-       <label>Especialidad:</label>
-       <input type="text"
+      <label>Especialidad:</label>
+       <input type="text" value={speciality}
        onChange={(event) =>{setSpeciality(event.target.value);}}
        ></input>
 
