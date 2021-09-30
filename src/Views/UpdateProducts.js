@@ -96,7 +96,7 @@ function UpdateProducts(){
        ></input>
        
        <label>Describe tu producto:</label>
-       <textarea   value={description}
+       <textarea   className="TextArea"  value={description}
        onChange={(event) =>{setDescription(event.target.value);}}
        ></textarea>
        
