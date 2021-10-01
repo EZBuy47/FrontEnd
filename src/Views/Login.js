@@ -3,6 +3,7 @@ import {useState} from 'react';
 import Axios from 'axios';
 import { useHistory } from "react-router-dom";
 import './Login.css'
+import botonGoogle from './Resources/LoginGoogle.png'
 function Login(){
     const history = useHistory();
     const [email,setEmail]=useState("");
@@ -39,6 +40,12 @@ function Login(){
          
          <button onClick={Entrada}>Entra
          </button>
+         
+         
+         <div>
+          <a className="GoogleLogin" href="https://accounts.google.com/signin/v2/identifier">
+          <img src={botonGoogle} alt="Boton google"/></a>
+          </div>
         </div>
         </body>
         </div>

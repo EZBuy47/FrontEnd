@@ -10,6 +10,9 @@
       background-color:gray;
     }
     
+    .GoogleLogin img:hover{
+      size:150%
+    }
     .Login p{
       font-size: 150%;
     }
