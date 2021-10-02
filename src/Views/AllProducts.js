@@ -38,7 +38,7 @@ function AllProducts(){
             <table  class="table table-hover">
               <thead>
               <tr>
-              <th scope="col">ID</th>  
+               
               <th scope="col">NOMBRE</th>
               <th scope="col">REFERENCIA</th>
               <th scope="col">PRECIO</th>
@@ -52,7 +52,6 @@ function AllProducts(){
           {listaProductos.map((val,key)=>{
               return(
               <tr  onClick={() => toUpdate(val._id)}>
-              <td scope="row">{ val._id }</td>
               <td>{ val.name }</td>
               <td>{ val.reference }</td>
               <td>{ val.price }</td>

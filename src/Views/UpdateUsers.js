@@ -6,8 +6,9 @@ import { useHistory,useParams } from "react-router-dom";
 
 function UpdateUsers(){
     const history = useHistory();
-    const {email} = useParams();
-    console.log(email);
+    const {id} = useParams();
+    console.log(id);
+    const [email,setEmail]=useState("");
     const [name,setName]=useState("");
     const [identification,setIdentification]=useState(0);
     const [cellphone,setCellphone]=useState(0);
@@ -15,11 +16,12 @@ function UpdateUsers(){
     const [addedDate,setAddedDate]=useState("");
     const [lastLoginDate,setLastLoginDate]=useState("");
     const [speciality,setSpeciality]=useState("");
+    const [state,setStateVar]=useState("");
     const [role,setRole]=useState("");
     
     useEffect(() => {
       
-      Axios.get(`http://localhost:3001/usersbyemail/${email}`,{
+      Axios.get(`http://localhost:3001/usersbyid/${id}`,{
             
       }).then((response)=>{
        console.log("Saludos");
@@ -30,7 +32,10 @@ function UpdateUsers(){
        setPassword(response.data.password);
        setAddedDate(response.data.addedDate);
        setSpeciality(response.data.speciality);
+       setEmail(response.data.email);
        setRole(response.data.role);
+       setStateVar(response.data.state);
+       setLastLoginDate(response.data.state);
        setLastLoginDate(response.data.lastLoginDate);
       });
     },[]);
@@ -39,7 +44,7 @@ function UpdateUsers(){
     
 
     const Actualizar=()=>{
-      Axios.put('http://localhost:3001/updateuser',{
+      Axios.put(`http://localhost:3001/updateuser/${id}`,{
           email:email,
           name:name,
           identification:identification,
@@ -48,7 +53,8 @@ function UpdateUsers(){
           role:role,
           lastLoginDate:lastLoginDate,
           cellphone:cellphone,
-          speciality:speciality
+          speciality:speciality,
+          state:state
       }).then(()=>{
         console.log("Update Exitoso");
         history.push('/AllUsers')
@@ -60,7 +66,7 @@ function UpdateUsers(){
      }
 
     const Borrar=()=>{
-      Axios.delete(`http://localhost:3001/deleteuser/${email}`,{
+      Axios.delete(`http://localhost:3001/deleteuser/${id}`,{
           
       }).then(()=>{
           console.log("Borrado Exitoso");
@@ -77,6 +83,7 @@ function UpdateUsers(){
 
          <label>Correo:</label>
          <input type="text" value={email} 
+          onChange={(event) =>{setEmail(event.target.value);}}
          ></input> 
         
         <label>Nombre:</label>
@@ -116,6 +123,10 @@ function UpdateUsers(){
        onChange={(event) =>{setRole(event.target.value);}}
        ></input>
          
+         <label>Estado:</label>
+       <input type="text" value={state}
+       onChange={(event) =>{setStateVar(event.target.value);}}
+       ></input>
       
       <label>Especialidad:</label>
        <input type="text" value={speciality}

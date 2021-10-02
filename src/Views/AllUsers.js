@@ -53,6 +53,7 @@ function AllUsers(){
                       <th scope="col">CELULAR</th>
                       <th scope="col">CONTRASEÑA</th>
                       <th scope="col">ESPECIALIDAD</th>
+                      <th scope="col">ESTADO</th>
                       <th scope="col">ROL</th>
                       <th scope="col">FECHA INGRESO</th>
                       <th scope="col">ULTIMO INGRESO</th>
@@ -62,13 +63,14 @@ function AllUsers(){
          {listaUsuarios.map((val,key)=>{
             
             return (
-            <tr onClick={() => toUpdate(val.email)}>
+            <tr onClick={() => toUpdate(val._id)}>
               <td scope="row">{ val.name }</td>
               <td>{ val.identification }</td>
               <td>{ val.email }</td>
               <td>{ val.cellphone }</td>
               <td>{ val.password }</td>
               <td>{ val.speciality }</td>
+              <td>{ val.state }</td>
               <td>{ val.role }</td>
               <td>{ val.addedDate }</td>
               <td>{ val.lastLoginDate }</td>

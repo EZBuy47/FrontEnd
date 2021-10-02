@@ -16,7 +16,7 @@ function Register(){
     const [addedDate,setAddedDate]=useState(new Date().toLocaleString() + "");
     const [speciality,setSpeciality]=useState("");
     const [role,setRole]=useState("Usuario");
-    
+    const [state,setState]=useState("Activo");
     const mostrarDatos = () =>{
       
       Axios.post('http://localhost:3001/newuser',{
@@ -28,6 +28,7 @@ function Register(){
         addedDate:addedDate,
         lastLoginDate:addedDate,
         role:role,
+        state:state,
         speciality:speciality
       }).then(()=>{
         console.log("Creacion Exitosa");
@@ -85,6 +86,10 @@ function Register(){
        onChange={(event) =>{setRole(event.target.value);}}
        ></input>
          
+         <label>Estado Asignado:</label>
+       <input type="text" disabled value = "Activo"
+       onChange={(event) =>{setState(event.target.value);}}
+       ></input>
       
          
 
