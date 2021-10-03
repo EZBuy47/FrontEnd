@@ -1,0 +1,112 @@
+.sales-container {
+    width: auto;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    padding: 14px 10px;
+    justify-content: center;
+}
+
+.second-container {
+    width: 50%;
+    display: flex;
+    background: gray;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-content: center;
+    padding: 14px 10px;
+    border-bottom-left-radius: 10px;
+    border-top-left-radius: 10px;
+}
+
+.second-container input[type="text"], .second-container select{
+    width: 100%;
+    margin: 3px;
+    text-align: center;
+    border: 2px solid #3742fa;
+    outline: none;
+    color: black;
+    transition: 0.25s;
+}
+
+.products-container {
+    width: 50%;
+    display: flex;
+    background: rgb(64, 64, 128);
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-content: center;
+    padding: 14px 10px;
+    border-bottom-right-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+.add-products {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-content: center;
+}
+
+.add-products input[type="text"], .add-products input[type="number"]{
+    width: 100%;
+    margin: 3px;
+    text-align: center;
+    border: 2px solid #3742fa;
+    outline: none;
+    color: black;
+    transition: 0.25s;
+}
+
+.title-add-products {
+    text-align: center;
+    color: #fff;
+    text-transform: uppercase;
+    font-size: medium;
+}
+
+.add-buttons {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    padding: 14px 10px;
+    justify-content: center;
+}
+
+.register-buttons {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    padding: 14px 10px;
+    justify-content: center;
+}
+
+.main-container button {
+    margin: 3px;
+    border: none;
+    background: gray;
+    border-radius: 5px;
+    transition: 0.25s;
+}
+
+.main-container button:hover {
+    margin: 3px;
+    border: none;
+    background: rgba(128, 128, 128, 0.514);
+    border-radius: 5px;
+    transition: 0.25s;
+}
+
+.table-products {
+    width: 100%;
+    background: gray;
+    /* fallback for old browsers */
+    color: white;
+    border-radius: 0.5cm;
+    text-align: center;
+}
+
+.table-products tbody {
+    background: rgb(148, 148, 148);
+}
