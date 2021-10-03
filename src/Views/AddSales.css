@@ -110,3 +110,31 @@
 .table-products tbody {
     background: rgb(148, 148, 148);
 }
+
+.list-products button{
+    background: #ff0000a2;
+    width: 30px;
+    height: 30px;
+    margin-left: 20px;
+    text-align: center;
+    border: 2px solid #ff0000;
+    outline: none;
+    color: white;
+    border-radius: 50%;
+    transition: 0.25s;
+    cursor: pointer;
+}
+
+.list-products button:hover{
+    background: #ff000062;
+    width: 30px;
+    height: 30px;
+    margin-left: 20px;
+    text-align: center;
+    border: 2px solid #ff0000;
+    outline: none;
+    color: white;
+    border-radius: 30%;
+    transition: 0.25s;
+    cursor: pointer;
+}

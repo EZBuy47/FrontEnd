@@ -11,6 +11,7 @@ import AllProducts from './Views/AllProducts';
 import UpdateProducts from './Views/UpdateProducts';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import AddSales from './Views/AddSales';
+import AllSales from './Views/AllSales';
 function App() {
 
   return (
@@ -26,6 +27,7 @@ function App() {
       <Route exact path="/AllProducts" component={AllProducts} />
       <Route exact path="/UpdateProducts/:id" component={UpdateProducts} />
       <Route exact path="/AddSales" component={AddSales} />
+      <Route exact path="/AllSales" component={AllSales} />
     </div>);
 }
 

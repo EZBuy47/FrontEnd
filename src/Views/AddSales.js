@@ -38,6 +38,7 @@ function AddSales() {
                                     <th scope="col" > NOMBRE </th>
                                     <th scope="col" > CANTIDAD </th>
                                     <th scope="col" > PRECIO </th>
+                                    <th scope="col" > ELIMINAR </th>
                                 </tr>
                             </thead>
                             <tbody>
@@ -45,6 +46,7 @@ function AddSales() {
                                     <td> Articulo1 </td>
                                     <td> Cantidad1 </td>
                                     <td> Precio1 </td>
+                                    <td> <button className="delete-button">-</button> </td>
                                 </tr>
                             </tbody>
                         </table>

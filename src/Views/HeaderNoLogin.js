@@ -17,6 +17,7 @@ function HeaderNoLogin(){
            <Link to="/AddProducts">Añade Tu Producto</Link>
            <Link to="/AllProducts">Lista Productos</Link>
            <Link to="/AddSales">Registrar Ventas</Link>
+           <Link to="/AllSales">lista Ventas</Link>
            </div>
         </div>
         </body>
