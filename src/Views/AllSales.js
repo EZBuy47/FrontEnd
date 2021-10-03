@@ -1,9 +1,17 @@
 import React from "react";
 import { useState } from 'react';
 import Axios from 'axios';
+import { useHistory } from "react-router-dom";
 import './AllSales.css'
 
 function AllSales() {
+    const history = useHistory();
+
+    const toUpdate= () =>{
+        history.push('/UpdateSales');
+        console.log("Hola");
+       }
+
     return (
         <div className="list-sales">
             <table class="table table-hover">
@@ -19,7 +27,7 @@ function AllSales() {
                     </tr>
                 </thead>
                 <tbody>
-                    <tr>
+                    <tr onClick={() => toUpdate()}>
                         <td> ID_VENTA1 </td>
                         <td> FECHA1 </td>
                         <td> NOMBRE_VENDEDOR1 </td>

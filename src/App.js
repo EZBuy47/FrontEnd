@@ -12,6 +12,7 @@ import UpdateProducts from './Views/UpdateProducts';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import AddSales from './Views/AddSales';
 import AllSales from './Views/AllSales';
+import UpdateSales from './Views/UpdateSales';
 function App() {
 
   return (
@@ -28,6 +29,7 @@ function App() {
       <Route exact path="/UpdateProducts/:id" component={UpdateProducts} />
       <Route exact path="/AddSales" component={AddSales} />
       <Route exact path="/AllSales" component={AllSales} />
+      <Route exact path="/UpdateSales" component={UpdateSales} />
     </div>);
 }
 
