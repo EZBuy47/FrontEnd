@@ -1,30 +1,30 @@
 import React from "react";
-import {useState} from 'react';
+import {useState,useEffect} from 'react';
 import Axios from 'axios';
 import './Register.css'
 
-import { useHistory } from "react-router-dom";
+import { useHistory,useParams } from "react-router-dom";
 
 function Register(){
   
   const history = useHistory();
+    const {id} = useParams();
+    console.log(id);  
     const [name,setName]=useState("");
     const [identification,setIdentification]=useState(0);
     const [cellphone,setCellphone]=useState(0);
     const [email,setEmail]=useState("");
-    const [password,setPassword]=useState("");
     const [addedDate,setAddedDate]=useState(new Date().toLocaleString() + "");
     const [speciality,setSpeciality]=useState("");
     const [role,setRole]=useState("Usuario");
     const [state,setState]=useState("Activo");
     const mostrarDatos = () =>{
       
-      Axios.post('http://localhost:3001/newuser',{
+      Axios.put(`http://localhost:3001/register/${id}`,{
         name:name, 
         identification:identification,
         cellphone:cellphone,
         email:email,
-        password:password,
         addedDate:addedDate,
         lastLoginDate:addedDate,
         role:role,
@@ -45,7 +45,7 @@ function Register(){
         <body>
           <center>
             
-       <p>Registrate Para disfrutar los beneficios</p>
+       <p>Ingresa Tu Informacion Para Comenzar A Disfrutar Los Beneficios</p>
        </center>
        <div className="Entradas">
          
@@ -58,11 +58,6 @@ function Register(){
        <label>Cedula:</label>
        <input type="number"
        onChange={(event) =>{setIdentification(event.target.value);}}
-       ></input>
-       
-       <label>Contraseña:</label>
-       <input type="text"
-       onChange={(event) =>{setPassword(event.target.value);}}
        ></input>
        
        <label>Correo:</label>

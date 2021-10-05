@@ -13,14 +13,16 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import AddSales from './Views/AddSales';
 import AllSales from './Views/AllSales';
 import UpdateSales from './Views/UpdateSales';
+import DashBoard from './Views/DashBoard';
 function App() {
 
   return (
 
     <div className="App" >
       <HeaderNoLogin />
+      
       <Route exact path="/" component={LandingPage} />
-      <Route exact path="/Register" component={Register} />
+      <Route exact path="/Register/:id" component={Register} />
       <Route exact path="/Login" component={Login} />
       <Route exact path="/AllUsers" component={AllUsers} />
       <Route exact path="/UpdateUsers/:id" component={UpdateUsers} />
@@ -30,6 +32,7 @@ function App() {
       <Route exact path="/AddSales" component={AddSales} />
       <Route exact path="/AllSales" component={AllSales} />
       <Route exact path="/UpdateSales" component={UpdateSales} />
+      <Route exact path="/DashBoard/:id" component={DashBoard} />
     </div>);
 }
 
