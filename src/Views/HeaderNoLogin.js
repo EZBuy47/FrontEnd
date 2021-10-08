@@ -64,7 +64,11 @@ function HeaderNoLogin (){
     history.replace('');
     history.replace('./BuyProducts/'+id); 
    }
-
+  
+   const toShopKart=(id) =>{
+    history.replace('');
+    history.replace('./ShopKart/'+id); 
+   }
 
     useEffect(() => {
 
@@ -120,7 +124,7 @@ function HeaderNoLogin (){
                             <div>
                             <button onClick={() => toSell(id)}>Vende </button>
                             <button  onClick={() => toBuy(id)}>Compra</button>
-                            <button>Tu Carrito</button>    
+                            <button onClick={() => toShopKart(id)}>Tu Carrito</button>    
                         </div>}
                             
                         </div>

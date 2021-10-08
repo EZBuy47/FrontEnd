@@ -13,7 +13,26 @@ function DashBoard(){
         history.replace('');
         history.replace('./MyProducts/'+id);   
        }
+    
+       const toSell = (id) =>{
+        history.replace('');
+        history.replace('./AddProduct/'+id);   
+       }
+       
+       const toBuy=(id) =>{
+        history.replace('');
+        history.replace('./BuyProducts/'+id); 
+       }
 
+       const toShopKart=(id) =>{
+        history.replace('');
+        history.replace('./ShopKart/'+id); 
+       }
+
+       const toMySales=(id) =>{
+        history.replace('');
+        history.replace('./MySales/'+id); 
+       }
 
     useEffect(() => {
       
@@ -41,10 +60,11 @@ function DashBoard(){
            <h2>¿Que Deseas hacer hoy?</h2>
            <hr></hr>
            <hr></hr>
-           <button>Vender Algo</button>
-           <button>Comprar Algo</button>
-           <button>Ver Tu Carrito</button>
+           <button onClick={() => toSell(id)}>Vender Algo</button>
+           <button onClick={() => toBuy(id)}>Comprar Algo</button>
+           <button onClick={() => toShopKart(id)}>Ver Tu Carrito</button>
            <button onClick={() => toMyProducts(id)}>Revisa Tus Productos</button>
+           <button onClick={() => toMySales(id)}>Revisa Tus Ventas</button>
            <button>Cambiar Tu Informacion Persional</button>
         </div>
     );

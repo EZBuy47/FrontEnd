@@ -17,6 +17,8 @@ import DashBoard from './Views/DashBoard';
 import MyProducts from './Views/MyProducts';
 import BuyProducts from './Views/BuyProducts';
 import MakeSale from './Views/MakeSale';
+import ShopKart from './Views/ShopKart';
+import MySales from './Views/MySales';
 function App() {
 
   return (
@@ -39,6 +41,8 @@ function App() {
       <Route exact path="/MyProducts/:id" component={MyProducts} />
       <Route exact path="/BuyProducts/:id" component={BuyProducts} />
       <Route exact path="/MakeSale/:userid/:productid" component={MakeSale} />
+      <Route exact path="/ShopKart/:id" component={ShopKart} />
+      <Route exact path="/MySales/:id" component={MySales} />
     </div>);
 }
 
