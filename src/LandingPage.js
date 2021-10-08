@@ -16,7 +16,7 @@ function LandingPage(){
         <div className="container2">
         <div class="container">
           <div class="row justify-content-center">
-            <h3>¡Para probar toda la experiencia sigue a registro!</h3>
+            <h3>¡Para probar toda la experiencia sigue a Iniciar Sesion!</h3>
           </div>
           </div>
         </div>
@@ -25,14 +25,7 @@ function LandingPage(){
         <div class="container">
           <div class="cajas">
             <div class="row justify-content-center">
-              <div class="col-lg">
-                <h3>Registrarme</h3>
-                <center>
-                  Haga parte de nuestro emprendimiento llenado un pequeño formulario
-                </center>
-                <a className="btn" href="/Register" role="button"
-                >Registro</a>
-              </div>
+              
               <div class="col-lg">
                 <h3>Iniciar sesión</h3>
                 <center>
