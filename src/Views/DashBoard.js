@@ -7,37 +7,28 @@ import { useHistory ,useParams} from "react-router-dom";
 function DashBoard(){
     const history = useHistory();
     const {id} = useParams();
-    const [email,setEmail]=useState("");
     const [name,setName]=useState("");
-    const [identification,setIdentification]=useState(0);
-    const [cellphone,setCellphone]=useState(0);
-    const [password,setPassword]=useState("");
-    const [addedDate,setAddedDate]=useState("");
-    const [lastLoginDate,setLastLoginDate]=useState("");
-    const [speciality,setSpeciality]=useState("");
-    const [state,setStateVar]=useState("");
-    const [role,setRole]=useState("");
     
+    const toMyProducts = (id) =>{
+        history.replace('');
+        history.replace('./MyProducts/'+id);   
+       }
+
+
     useEffect(() => {
       
         Axios.get(`http://localhost:3001/usersbyid/${id}`,{
         }).then((response)=>{
          setName(response.data.name);
-         setIdentification(response.data.identification);
-         setCellphone(response.data.cellphone);
-         setAddedDate(response.data.addedDate);
-         setSpeciality(response.data.speciality);
-         setEmail(response.data.email);
-         setRole(response.data.role);
-         setStateVar(response.data.state);
-         setLastLoginDate(response.data.state);
-         setLastLoginDate(response.data.lastLoginDate);
+         var currUserState=response.data.alreadyRegistered;
+                    if(!currUserState){
+                        history.replace('')
+                        history.replace('./Register/'+id);
+                    }
         });
         
         Axios.get('http://localhost:3001/currentuserid',{}).then((response)=>{
             
-            console.log("HEADER ANSWER:");
-            console.log(response);
         })
         
       },[]);
@@ -53,7 +44,7 @@ function DashBoard(){
            <button>Vender Algo</button>
            <button>Comprar Algo</button>
            <button>Ver Tu Carrito</button>
-           <button>Revisa Tus Productos</button>
+           <button onClick={() => toMyProducts(id)}>Revisa Tus Productos</button>
            <button>Cambiar Tu Informacion Persional</button>
         </div>
     );

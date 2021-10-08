@@ -1,19 +1,9 @@
 import React from "react";
-import {useState} from 'react';
-import Axios from 'axios';
-import { useHistory } from "react-router-dom";
 import './Login.css'
-import botonGoogle from './Resources/LoginGoogle.png'
+
 function Login(){
-    const history = useHistory();
-    const [email,setEmail]=useState("");
+    
    
-    const [password,setPassword]=useState("");
-   
-    const Entrada = () =>{
-        console.log("Login Exitoso");
-        history.push('../')
-    };
     
     return (
       
@@ -24,22 +14,7 @@ function Login(){
          </center>
          <div className="Entradas">
          
-         <label>Correo:</label>
-         <input type="text" 
-         onChange={(event) =>{setEmail(event.target.value);}}
-         ></input>
-         
-         
-         
-         <label>Contraseña:</label>
-         <input type="text"
-         onChange={(event) =>{setPassword(event.target.value);}}
-         ></input>
-         
-         
-         
-         <button onClick={Entrada}>Entra
-         </button>
+        
          
          <form action="http://localhost:3001/auth/google">
           <button type="submit" className="google-button">

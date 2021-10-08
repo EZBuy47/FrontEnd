@@ -3,28 +3,18 @@ import {useState} from 'react';
 import Axios from 'axios';
 import './Register.css'
 
-import { useHistory } from "react-router-dom";
+import { useHistory,useParams } from "react-router-dom";
 
 function AddProducts(){
+  const {id} = useParams();
   
   const history = useHistory();
-  /*  name: req.body.name,
-        reference:req.body.reference,
-        serial:req.body.serial,
-        description:req.body.description,
-        cuantity:req.body.cuantity,
-        soldby:req.body.soldby,
-        boughtby:req.body.boughtby,
-        image:req.body.image,*/ 
-  
-  
     const [name,setName]=useState("");
     const [reference,setReference]=useState("");
     const [price,setPrice]=useState("");
     const [description,setDescription]=useState("");
     const [cuantity,setCuantity]=useState(0);
-    const [soldby,setSoldby]=useState("");
-    const [boughtby,setBoughtby]=useState("");
+    var soldby= id;
     
     
     const mostrarDatos = () =>{
@@ -35,11 +25,10 @@ function AddProducts(){
         price:price,
         description:description,
         cuantity:cuantity,
-        soldby:soldby,
-        boughtby:boughtby
+        soldby:soldby
       }).then(()=>{
-        console.log("Creacion Exitosa");
-        history.push('../')
+        history.replace('');
+        history.replace('./DashBoard/'+id); 
       }).catch(error =>console.log(error))
         
         
@@ -79,16 +68,8 @@ function AddProducts(){
        ></textarea>
        
        <label>Vendido Por:</label>
-       <input  type="text" disabled placeholder="Implementar Login"
-       onChange={(event) =>{setSoldby(event.target.value);}}
+       <input  type="text" disabled value={id}
        ></input>
-
-      <label>Comprado por:</label>
-       <input type="text" disabled value="Nadie"
-       onChange={(event) =>{setBoughtby(event.target.value);}}
-       ></input>
-
-       
 
        <button onClick={mostrarDatos}>Añade el producto
        </button>

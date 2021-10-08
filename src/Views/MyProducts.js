@@ -1,18 +1,20 @@
 import React from "react";
 import {useState,useEffect} from 'react';
 import Axios from 'axios';
-import { useHistory } from "react-router-dom";
+import { useHistory,useParams } from "react-router-dom";
 import './AllProducts.css'
-function AllProducts(){
+function MyProducts(){
     const history = useHistory();
     const [listaProductos,setListaProductos] = useState([]);
     const useMountEffect = (fun) => useEffect(fun, []);
-    
+    const {id} = useParams();
+    console.log(id);
+  
 
 
     useEffect(() => {
       
-      Axios.get('http://localhost:3001/allproducts',{
+      Axios.get(`http://localhost:3001/myproducts/${id}`,{
             
       }).then((response)=>{
         console.log("Saludos");
@@ -24,8 +26,8 @@ function AllProducts(){
 
 
     const toUpdate= (id) =>{
-     history.push('./UpdateProducts/'+id);
-     console.log("Hola");
+   history.replace('');
+    history.replace('./UpdateProducts/'+id);
     }
     
     return (
@@ -45,6 +47,7 @@ function AllProducts(){
               <th scope="col">CANTIDAD</th>
               <th scope="col">DESCRIPCION</th>
               <th scope="col">VENDIDO POR</th>
+              <th scope="col">COMPRADO POR</th>
             </tr>
           </thead>
           <tbody>
@@ -56,6 +59,7 @@ function AllProducts(){
               <td>{ val.price }</td>
               <td>{ val.cuantity }</td>
               <td>{ val.description }</td>
+              <td>{ val.boughtby }</td>
               <td>{ val.soldby }</td>
               </tr>
                )
@@ -71,4 +75,4 @@ function AllProducts(){
       );
 }
 
-export default AllProducts;
+export default MyProducts;

@@ -4,24 +4,24 @@ import Axios from 'axios';
 import './Register.css'
 import { useHistory,useParams } from "react-router-dom";
 
-function UpdateProducts(){
+function MakeSale(){
     const history = useHistory();
-    const {id} = useParams();
-    console.log(id);
+    const {userid} = useParams(0);
+    const {productid} = useParams();
     const [name,setName]=useState("");
     const [reference,setReference]=useState("");
     const [price,setPrice]=useState("");
     const [description,setDescription]=useState("");
     const [cuantity,setCuantity]=useState(0);
     const [soldby,setSoldby]=useState("");
-    
+    const [soldDate,setAddedDate]=useState(new Date().toLocaleString() + "");
+
     useEffect(() => {
       
-        Axios.get(`http://localhost:3001/productbyid/${id}`,{
+        Axios.get(`http://localhost:3001/productbyid/${productid}`,{
               
         }).then((response)=>{
-          console.log("Saludos");
-          console.log(response.data);
+          
           setName(response.data.name);
           setReference(response.data.reference);
           setPrice(response.data.price);
@@ -32,52 +32,47 @@ function UpdateProducts(){
       },[]);
     
 
-    const Actualizar=()=>{
-      Axios.put(`http://localhost:3001/updateproduct/${id}`,{
-        id:id,
+    
+     const buyProd =()=>{
+        Axios.post('http://localhost:3001/newsale',{
         name:name, 
         reference:reference,
         price:price,
         description:description,
         cuantity:cuantity,
-        soldby:soldby
-      }).then(()=>{
-        console.log("Update Exitoso");
-        history.push('/AllProducts')
-      }).catch(error =>console.log("Algo Loco Pasó"))
-    }
-
-     const Regresar= () =>{
-         history.push('/AllProducts')
+        soldby:soldby,
+        boughtby:userid,
+        soldDate:soldDate
+        }).then(()=>{
+            history.replace('');
+            history.replace('./BuyProducts/'+userid); 
+          }).catch(error =>console.log(error))
      }
 
-    const Borrar=()=>{
-      Axios.delete(`http://localhost:3001/deleteproduct/${id}`,{
-          
-      }).then(()=>{
-          console.log("Borrado Exitoso");
-          history.push('/AllProducts');
-      }).catch(error =>console.log("error"))
-    }
+     const Regresar= () =>{
+        history.replace('');
+         history.replace('/BuyProducts/'+userid);     }
+
+    
 
     return (
       
         <div className="Register">
           <body>
-         <p>Cambia Tu informacion aqui</p>
+         <p>Detalles de la compra</p>
          <div className="Entradas">
 
 
-       <label>ID:</label>
-       <input type="text" value={id}
+       <label>ID Producto:</label>
+       <input type="text" value={productid}
        ></input>
 
-       <label>Nombre:</label>
+       <label>Nombre Producto:</label>
        <input type="text" value={name}
        onChange={(event) =>{setName(event.target.value);}}
        ></input>
        
-       <label>Referencia:</label>
+       <label>Referencia Producto:</label>
        <input type="text" value={reference}
        onChange={(event) =>{setReference(event.target.value);}}
        ></input>
@@ -92,7 +87,7 @@ function UpdateProducts(){
        onChange={(event) =>{setCuantity(event.target.value);}}
        ></input>
        
-       <label>Describe tu producto:</label>
+       <label>Descripcion producto:</label>
        <textarea   className="TextArea"  value={description}
        onChange={(event) =>{setDescription(event.target.value);}}
        ></textarea>
@@ -102,10 +97,15 @@ function UpdateProducts(){
        onChange={(event) =>{setSoldby(event.target.value);}}
        ></input>
 
-         <button className="updater" onClick={() => Actualizar()}>Actualizar
+       <label>Fecha de Venta:</label>
+       <input  type="text"  value={soldDate}
+       onChange={(event) =>{setSoldby(event.target.value);}}
+       ></input>
+
+         <button className="updater" onClick={() => buyProd()}>Comprar
          </button>
 
-         <button className="deleter"  onClick={() => Borrar()}>Borrar
+         <button className="deleter" >Añadir Al Carrito
          </button>
 
          <button className="return"  onClick={() => Regresar()}>Regresa
@@ -118,4 +118,4 @@ function UpdateProducts(){
         );
 }
 
-export default UpdateProducts;
+export default MakeSale;

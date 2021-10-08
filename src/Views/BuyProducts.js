@@ -1,31 +1,31 @@
 import React from "react";
 import {useState,useEffect} from 'react';
 import Axios from 'axios';
-import { useHistory } from "react-router-dom";
+import { useHistory,useParams } from "react-router-dom";
 import './AllProducts.css'
-function AllProducts(){
+function BuyProducts(){
     const history = useHistory();
     const [listaProductos,setListaProductos] = useState([]);
     const useMountEffect = (fun) => useEffect(fun, []);
-    
+    const {id} = useParams();
+    var userID=id;
 
+    
 
     useEffect(() => {
       
-      Axios.get('http://localhost:3001/allproducts',{
+      Axios.get(`http://localhost:3001/allotherproducts/${id}`,{
             
       }).then((response)=>{
-        console.log("Saludos");
-        console.log(response.data);
         setListaProductos(response.data);
       });
     },[]);
   
 
 
-    const toUpdate= (id) =>{
-     history.push('./UpdateProducts/'+id);
-     console.log("Hola");
+    const makeSale= (productID) =>{
+        history.replace('');
+        history.replace('./MakeSale/'+userID+'/'+productID);
     }
     
     return (
@@ -50,7 +50,7 @@ function AllProducts(){
           <tbody>
           {listaProductos.map((val,key)=>{
               return(
-              <tr  onClick={() => toUpdate(val._id)}>
+              <tr  onClick={() => makeSale(val._id)}>
               <td>{ val.name }</td>
               <td>{ val.reference }</td>
               <td>{ val.price }</td>
@@ -71,4 +71,4 @@ function AllProducts(){
       );
 }
 
-export default AllProducts;
+export default BuyProducts;

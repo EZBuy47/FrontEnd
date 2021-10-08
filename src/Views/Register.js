@@ -32,7 +32,8 @@ function Register(){
         speciality:speciality
       }).then(()=>{
         console.log("Creacion Exitosa");
-        history.push('../')
+        history.replace('');
+        history.replace('./DashBoard/'+id);
       }).catch(error =>console.log("El correo ya existe"))
         
         
