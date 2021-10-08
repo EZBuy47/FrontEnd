@@ -19,12 +19,16 @@
   }
   .LinkBox{
       float: right;
+      border-style: groove;
+      border-radius: 1cm;
   }
   .HeaderNoLogin a:hover {
     background: #667db6;  /* fallback for old browsers */
     background: -webkit-linear-gradient(to right, #00bbff, #0082c8, #0082c8, #00bbff);  /* Chrome 10-25, Safari 5.1-6 */
     background: linear-gradient(to right, #00bbff, #0082c8, #0082c8, #00bbff); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-
+    font-size: 130%;
+    border-style: dotted;
+    border-radius: 1cm;
     color: black;
   }
 
