@@ -14,7 +14,8 @@ function MakeSale(){
     const [description,setDescription]=useState("");
     const [cuantity,setCuantity]=useState(0);
     const [soldby,setSoldby]=useState("");
-    const [soldDate,setAddedDate]=useState(new Date().toLocaleString() + "");
+    const [state,setState]=useState("ESPERANDO PAGO");
+    const [soldDate,setSoldDate]=useState(new Date().toLocaleString() + "");
 
     useEffect(() => {
       
@@ -42,7 +43,8 @@ function MakeSale(){
         cuantity:cuantity,
         soldby:soldby,
         boughtby:userid,
-        soldDate:soldDate
+        soldDate:soldDate,
+        state:state
         }).then(()=>{
             history.replace('');
             history.replace('./BuyProducts/'+userid); 
@@ -97,9 +99,9 @@ function MakeSale(){
        onChange={(event) =>{setSoldby(event.target.value);}}
        ></input>
 
-       <label>Fecha de Venta:</label>
-       <input  type="text"  value={soldDate}
-       onChange={(event) =>{setSoldby(event.target.value);}}
+       <label>Fecha de registro:</label>
+       <input  type="text" disabled value={new Date().toLocaleString() + ""}
+       onChange={(event) =>{setSoldDate(event.target.value);}}
        ></input>
 
          <button className="updater" onClick={() => buyProd()}>Comprar
