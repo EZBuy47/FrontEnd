@@ -2,7 +2,11 @@
     position:absolute;
     z-index:-1;
   }
-
+body{
+  background: #4b6cb7;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to bottom, #0ABF04, #BDF2CA);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #0ABF04, #BDF2CA); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
   
 .LandgingPage body {
     height: 100vh;
@@ -62,6 +66,7 @@ h1{
     border: solid 1px rgba(255, 255, 255, 0.6);
     backdrop-filter: blur(4px);
     border-radius: 10px;
+    box-shadow: 0 0 20px 10px;
   }
 
   .col-lg h3 {

@@ -4,8 +4,6 @@ import background from './Views/Resources/BackGroundLandingPage.jpg'
 function LandingPage(){
     return(
         <div class="body" >
-         <div style={{  backgroundImage: `url(${background})`}}></div>
-          <img  src={background} className="background" />
         <div className="container1">
         <div class="container">
           <div class="row justify-content-center">

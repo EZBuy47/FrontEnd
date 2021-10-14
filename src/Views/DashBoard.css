@@ -1,0 +1,10 @@
+hr{
+    visibility: hidden;
+}
+button{
+    padding: 0.3cm;
+    border-style: ridge;
+    border-radius: 0.3cm;
+    background-color: floralwhites;
+
+}
