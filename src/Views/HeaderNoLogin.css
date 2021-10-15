@@ -58,6 +58,16 @@ a{
 .container{
   text-align: center;
 }
+.botonHeader{
+  background-color: transparent;
+  border: transparent;
+}
+.botonHeader:hover{
+  border: 2px black;
+  font-size: 120%;
+  border-style: ridge;
+  background-color: rgb(132, 240, 168);
+}
 
 
 

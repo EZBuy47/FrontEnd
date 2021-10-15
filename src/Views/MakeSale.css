@@ -1,0 +1,32 @@
+.card-body{
+    justify-content: center;
+}
+.card-body2{
+    align-items: center;
+    display: grid;
+}
+label{
+    grid-column: 1;
+}
+input{
+    grid-column: 2;
+    text-align: end;
+}
+.updater{
+    margin-left: 2%;
+}
+.deleter{
+    margin-left: 5%;
+}
+.return{
+    margin-left: 5%;
+}
+.updater:hover{
+    background-color: rgb(173, 248, 97);
+}
+.deleter:hover{
+    background-color: rgb(173, 248, 97);
+}
+.return:hover{
+    background-color: rgb(173, 248, 97);
+}

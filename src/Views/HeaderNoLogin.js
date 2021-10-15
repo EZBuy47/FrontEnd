@@ -77,7 +77,6 @@ function HeaderNoLogin() {
                 }).then((response) => {
                     setName(response.data.name);
                     setRole(response.data.role);
-
                 });
             }
         })
@@ -94,39 +93,39 @@ function HeaderNoLogin() {
                         <img src={logo} className="App-logo" />
                     </div>
                     <div className="containerNombre" >
-                        <p>Bienvenido{name}</p>
+                        <p>Bienvenido&nbsp;&nbsp;{name}</p>
                     </div>
                 </nav>
                 <nav class="navbar navbar-expand ">
                     {showProfileButton &&
                         <div className="container">
                             <div className="container">
-                            <a className="link" style={{ textDecoration: 'none' }} onClick={() => toDash(id)}>Perfil</a>
+                            <a style={{ textDecoration: 'none' }} onClick={() => toDash(id)}><button className="botonHeader">Perfil</button></a>
                             </div>
                             <div className="container">
-                            <Link className="link" style={{ textDecoration: 'none' }} onClick={() => logOut()}>Salir</Link>
+                            <a style={{ textDecoration: 'none' }} onClick={() => logOut()}><button className="botonHeader">Salir</button></a>
                             </div>
                         </div>}
                     {showRegisterAndLogin &&
                         <div className="container">
                             <div className="container">
-                            <Link className="link" to="/" style={{ textDecoration: 'none' }}>Al Inicio</Link>
+                            <Link to="/" style={{ textDecoration: 'none' }}><button className="botonHeader">Al&nbsp;Inicio</button></Link>
                             </div>
                             <div className="container">
-                            <Link className="link" to="/Login" style={{ textDecoration: 'none' }}>Entra</Link>
+                            <Link to="/Login" style={{ textDecoration: 'none' }}><button className="botonHeader">Entra</button></Link>
                             </div>
                         </div>
                     }
                     {showAdminStuff &&
                         <div className="container">
                             <div className="container">
-                            <Link className="link" to="/AllUsers" style={{ textDecoration: 'none' }}>ListaUsuarios</Link>
+                            <Link to="/AllUsers" style={{ textDecoration: 'none' }}><button className="botonHeader">Lista&nbsp;Usuarios</button></Link>
                             </div>
                             <div className="container">
-                            <Link className="link" to="/AllProducts" style={{ textDecoration: 'none' }}>ListaProductos</Link>
+                            <Link to="/AllProducts" style={{ textDecoration: 'none' }}><button className="botonHeader">Lista&nbsp;Productos</button></Link>
                             </div>
                             <div className="container">
-                            <Link className="link" to="/AllSales" style={{ textDecoration: 'none' }}>ListaVentas</Link>
+                            <Link to="/AllSales" style={{ textDecoration: 'none' }}><button className="botonHeader">Lista&nbsp;Ventas</button></Link>
                             </div>
                         </div>
                     }
