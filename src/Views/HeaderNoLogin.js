@@ -94,26 +94,40 @@ function HeaderNoLogin() {
                         <img src={logo} className="App-logo" />
                     </div>
                     <div className="containerNombre" >
-                        <p>Bienvenido {name}</p>
+                        <p>Bienvenido{name}</p>
                     </div>
                 </nav>
-                <nav class="navbar-nav">
+                <nav class="navbar navbar-expand ">
                     {showProfileButton &&
                         <div className="container">
-                            <Link className="link" onClick={() => toDash(id)}>Perfil</Link>
-                            <Link className="link" onClick={() => logOut()}>Salir</Link>
+                            <div className="container">
+                            <a className="link" style={{ textDecoration: 'none' }} onClick={() => toDash(id)}>Perfil</a>
+                            </div>
+                            <div className="container">
+                            <Link className="link" style={{ textDecoration: 'none' }} onClick={() => logOut()}>Salir</Link>
+                            </div>
                         </div>}
                     {showRegisterAndLogin &&
                         <div className="container">
+                            <div className="container">
                             <Link className="link" to="/" style={{ textDecoration: 'none' }}>Al Inicio</Link>
+                            </div>
+                            <div className="container">
                             <Link className="link" to="/Login" style={{ textDecoration: 'none' }}>Entra</Link>
+                            </div>
                         </div>
                     }
                     {showAdminStuff &&
                         <div className="container">
-                            <Link className="link" to="/AllUsers" style={{ textDecoration: 'none' }}>Lista Usuarios</Link>
-                            <Link className="link" to="/AllProducts" style={{ textDecoration: 'none' }}>Lista Productos</Link>
-                            <Link className="link" to="/AllSales" style={{ textDecoration: 'none' }}>Lista Ventas</Link>
+                            <div className="container">
+                            <Link className="link" to="/AllUsers" style={{ textDecoration: 'none' }}>ListaUsuarios</Link>
+                            </div>
+                            <div className="container">
+                            <Link className="link" to="/AllProducts" style={{ textDecoration: 'none' }}>ListaProductos</Link>
+                            </div>
+                            <div className="container">
+                            <Link className="link" to="/AllSales" style={{ textDecoration: 'none' }}>ListaVentas</Link>
+                            </div>
                         </div>
                     }
                     {showUserStuff &&
