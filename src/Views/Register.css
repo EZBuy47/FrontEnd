@@ -36,3 +36,9 @@ font-family: Arial, Helvetica, sans-serif;
  .Entradas button:hover{
    cursor: pointer;
  }
+.card-body2{
+  display: grid;
+}
+input{
+  grid-column: 1;
+}

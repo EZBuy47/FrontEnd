@@ -1,8 +1,7 @@
 .container-fluid{
   min-height: 11vh;
-  background: #4b6cb7;  /* fallback for old browsers */
-  background: -webkit-linear-gradient(to bottom, #0ABF04, #BDF2CA);  /* Chrome 10-25, Safari 5.1-6 */
-  background: linear-gradient(to right, #0ABF04, #BDF2CA); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  color: white;
+  background: teal;
   border-style: none none ridge none;
   border-color: black;
 }
@@ -30,9 +29,8 @@ a{
 .containerNombre{
   font-size: 0.8cm;
   font-weight: 800;
-  font-family: Georgia, serif;
+  font-family: Arial, Helvetica, sans-serif, serif;
   font-stretch: expanded;
-  text-decoration-line: underline;
 }
 .App-Nombre{
   visibility: visible;
@@ -59,14 +57,16 @@ a{
   text-align: center;
 }
 .botonHeader{
+  font-size: 120%;
+  color: white;
   background-color: transparent;
   border: transparent;
 }
 .botonHeader:hover{
+  color: white;
   border: 2px black;
-  font-size: 120%;
+  font-size: 140%;
   border-style: ridge;
-  background-color: rgb(132, 240, 168);
 }
 
 
