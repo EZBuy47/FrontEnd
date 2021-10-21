@@ -12,7 +12,7 @@ function AllProducts(){
 
     useEffect(() => {
       
-      Axios.get('http://localhost:3001/allproducts',{
+      Axios.get('https://ezbuy-backend.herokuapp.com/allproducts',{
             
       }).then((response)=>{
         console.log("Saludos");
